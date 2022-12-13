@@ -9,6 +9,7 @@ public:
     void fillArray();
     void getRooms();
     void roomWriteFile();
+    void roomReadFile();
 private:
     QString roomName;
 

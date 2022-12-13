@@ -1,8 +1,9 @@
 #include <iostream>
 #include <fstream>
 #include <QtDebug>
-#include <iostream>
-#include <string>
+#include <QFile>
+#include <QTextStream>
+
 #include "rooms.h"
 
 Rooms::Rooms()
@@ -11,17 +12,25 @@ Rooms::Rooms()
 }
 
 void Rooms::getRooms() {
+
 }
 
 void Rooms::roomWriteFile() {
-    QString myText;
-    std::ofstream MyFile("rooms.txt");
+    QFile file("room.txt");
+    if (!file.open(QIODevice::WriteOnly | QIODevice::Text))
+        return;
 
-    MyFile << "room1" << std::endl << "room2" << std::endl << "room3";
+    QTextStream out(&file);
+    out << "room 1" << Qt::endl << "room 2";
+}
 
-    while (getline(MyFile, myText)) {
-        qDebug() << myText;
+void Rooms::roomReadFile() {
+    QFile file("room.txt");
+    if (!file.open(QIODevice::ReadOnly | QIODevice::Text))
+        return;
+
+    while (!file.atEnd()) {
+        QString line = file.readLine();
+        qDebug() << line;
     }
-
-    MyFile.close();
 }

@@ -26,3 +26,10 @@ void MainWindow::on_pushButton_2_clicked()
     rooms.roomWriteFile();
 }
 
+
+void MainWindow::on_pushButton_3_clicked()
+{
+    Rooms rooms;
+    rooms.roomReadFile();
+}
+
