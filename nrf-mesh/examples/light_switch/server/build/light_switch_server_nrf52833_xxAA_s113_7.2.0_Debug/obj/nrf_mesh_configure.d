@@ -1,5 +1,5 @@
 build/light_switch_server_nrf52833_xxAA_s113_7.2.0_Debug/obj/nrf_mesh_configure.o: \
- C:\nrf-mesh\mesh\core\src\nrf_mesh_configure.c \
+ C:\project\ domotica\nrf-mesh\mesh\core\src\nrf_mesh_configure.c \
  C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 6.40/include/string.h \
  C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 6.40/include/__SEGGER_RTL.h \
  C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 6.40/include/__SEGGER_RTL_ConfDefaults.h \

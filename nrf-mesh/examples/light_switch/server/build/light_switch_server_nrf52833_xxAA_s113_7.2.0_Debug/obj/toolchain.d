@@ -1,5 +1,5 @@
 build/light_switch_server_nrf52833_xxAA_s113_7.2.0_Debug/obj/toolchain.o: \
- C:\nrf-mesh\mesh\core\src\toolchain.c \
+ C:\project\ domotica\nrf-mesh\mesh\core\src\toolchain.c \
  ../../../mesh/core/include/toolchain.h \
  C:/nrf-mesh/nRF5_SDK_17.1.0_ddde560/modules/nrfx/mdk/nrf.h \
  C:/nrf-mesh/nRF5_SDK_17.1.0_ddde560/modules/nrfx/mdk/nrf52833.h \
