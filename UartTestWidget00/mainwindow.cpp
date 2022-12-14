@@ -9,14 +9,7 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    serial.setPortName("com3");
-    serial.setBaudRate(QSerialPort::Baud9600);
-    serial.setDataBits(QSerialPort::Data8);
-    serial.setParity(QSerialPort::NoParity);
-    serial.setStopBits(QSerialPort::OneStop);
-    serial.setFlowControl(QSerialPort::NoFlowControl);
-    serial.open(QIODevice::ReadWrite);
-    serial.write("ok"); // voledig werkent om data te sturen
+    serialSetup();
 }
 
 MainWindow::~MainWindow()
@@ -27,18 +20,45 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_pushButton_clicked()
 {
-   // serial.setPortName("com3");
-   // serial.setBaudRate(QSerialPort::Baud9600);
-   // serial.setDataBits(QSerialPort::Data8);
-   // serial.setParity(QSerialPort::NoParity);
-   // serial.setStopBits(QSerialPort::OneStop);
-   // serial.setFlowControl(QSerialPort::NoFlowControl);
-   // serial.open(QIODevice::ReadWrite);
+    // serial.setPortName("com3");
+    // serial.setBaudRate(QSerialPort::Baud9600);
+    // serial.setDataBits(QSerialPort::Data8);
+    // serial.setParity(QSerialPort::NoParity);
+    // serial.setStopBits(QSerialPort::OneStop);
+    // serial.setFlowControl(QSerialPort::NoFlowControl);
+    // serial.open(QIODevice::ReadWrite);
+
+
     serial.write("\n test");
 
 
     std::cout << "done" << std::endl;
+    serialRead();
+}
+
+
+void MainWindow::serialRead() {
+    while(serial.waitForReadyRead(10)) {
+        QByteArray requestData = serial.readAll();
+        qDebug() << requestData;
+
+    }
 
 }
 
+void MainWindow::serialWrite() {
+
+}
+
+void MainWindow::serialSetup() {
+
+    serial.setPortName("com3");
+    serial.setBaudRate(QSerialPort::Baud9600);
+    serial.setDataBits(QSerialPort::Data8);
+    serial.setParity(QSerialPort::NoParity);
+    serial.setStopBits(QSerialPort::OneStop);
+    serial.setFlowControl(QSerialPort::NoFlowControl);
+    serial.open(QIODevice::ReadWrite);
+    serial.write("ok"); // voledig werkent om data te sturen
+}
 

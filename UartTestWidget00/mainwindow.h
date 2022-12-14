@@ -14,6 +14,9 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+    void serialWrite();
+    void serialRead();
+    void serialSetup();
 
 private slots:
     void on_pushButton_clicked();
