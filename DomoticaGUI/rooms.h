@@ -13,6 +13,7 @@ public:
 private:
     QString roomName;
 
+
 };
 
 #endif // ROOMS_H

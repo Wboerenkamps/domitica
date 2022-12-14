@@ -1,3 +1,10 @@
+#include <iostream>
+#include <fstream>
+#include <QtDebug>
+#include <QFile>
+#include <QTextStream>
+#include <string>         // std::string
+
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "rooms.h"
@@ -15,8 +22,6 @@ MainWindow::~MainWindow()
 }
 
 void MainWindow::fillListView() {
-    QString array_List[5]={"Delphi","Mobile","Dot Net","Java","Open Source"};
-
 
 }
 
@@ -29,7 +34,16 @@ void MainWindow::on_pushButton_2_clicked()
 
 void MainWindow::on_pushButton_3_clicked()
 {
-    Rooms rooms;
-    rooms.roomReadFile();
+    QFile file("room.txt");
+    if (!file.open(QIODevice::ReadOnly | QIODevice::Text))
+        return;
+
+    while (!file.atEnd()) {
+        QString line = file.readLine();
+        //line = line.erase(line.find("/n"));
+        QString test = "/n ";
+        qDebug() << line.trimmed();
+        ui->comboBox->addItem(line.trimmed());
+    }
 }
 
