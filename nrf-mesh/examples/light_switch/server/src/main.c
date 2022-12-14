@@ -321,13 +321,13 @@ static void button_event_handler(uint32_t button_number)
             //hal_led_pin_set(BSP_LED_0, set_params.on_off);
         case 3:
             set_params.on_off = ledstatus;
-            (void)access_model_reliable_cancel(m_clients[1].model_handle);
-            status = generic_onoff_client_set(&m_clients[1], &set_params, &transition_params);
+            (void)access_model_reliable_cancel(m_clients[0].model_handle);
+            status = generic_onoff_client_set(&m_clients[0], &set_params, &transition_params);
             break;
         case 4:
             set_params.on_off = APP_STATE_OFF;
-            (void)access_model_reliable_cancel(m_clients[2].model_handle);
-            status = generic_onoff_client_set(&m_clients[2], &set_params, &transition_params);
+            (void)access_model_reliable_cancel(m_clients[0].model_handle);
+            status = generic_onoff_client_set(&m_clients[0], &set_params, &transition_params);
             break;
     }
 
