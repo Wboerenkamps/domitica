@@ -1,0 +1,49 @@
+<!DOCTYPE CrossStudio_Session_File>
+<session>
+ <Bookmarks/>
+ <Breakpoints groups="Breakpoints" active_group="Breakpoints"/>
+ <ExecutionProfileWindow/>
+ <FrameBufferWindow>
+  <FrameBufferWindow bufferHeight="-1" addressSpace="" addressText="" bufferWidth="-1"/>
+ </FrameBufferWindow>
+ <Memory1/>
+ <Memory2/>
+ <Memory3/>
+ <Memory4/>
+ <Project>
+  <ProjectSessionItem path="light_switch_server_nrf52833_xxAA_s113_7.2.0"/>
+  <ProjectSessionItem path="light_switch_server_nrf52833_xxAA_s113_7.2.0;light_switch_server_nrf52833_xxAA_s113_7.2.0"/>
+  <ProjectSessionItem path="light_switch_server_nrf52833_xxAA_s113_7.2.0;light_switch_server_nrf52833_xxAA_s113_7.2.0;Application"/>
+  <ProjectSessionItem path="light_switch_server_nrf52833_xxAA_s113_7.2.0;light_switch_server_nrf52833_xxAA_s113_7.2.0;Generic OnOff Model"/>
+ </Project>
+ <Register1/>
+ <Register2/>
+ <Register3/>
+ <Register4/>
+ <Threads>
+  <ThreadsWindow showLists=""/>
+ </Threads>
+ <TraceWindow>
+  <Trace enabled="Yes"/>
+ </TraceWindow>
+ <Watch1>
+  <Watches active="1" update="Never"/>
+ </Watch1>
+ <Watch2>
+  <Watches active="0" update="Never"/>
+ </Watch2>
+ <Watch3>
+  <Watches active="0" update="Never"/>
+ </Watch3>
+ <Watch4>
+  <Watches active="0" update="Never"/>
+ </Watch4>
+ <Files>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="0" useTextEdit="1" path="../../../doc/getting_started/SES.md" left="0" top="0" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="551" useTextEdit="1" path="src/main.c" left="0" top="506" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="0" useTextEdit="1" openedFrom="C:/nrf-mesh/examples/light_switch2/server/src/main.c" path="../../../models/model_spec/scene/include/scene_setup_server.h" left="0" top="20" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="36" y="259" useTextEdit="1" path="../../../mesh/core/include/log.h" left="0" top="224" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="0" useTextEdit="1" path="../../common/src/app_onoff.c" left="0" selected="1" top="88" codecName="Default"/>
+ </Files>
+ <EMStudioWindow activeProject="light_switch_server_nrf52833_xxAA_s113_7.2.0" fileDialogDefaultFilter="*.c" autoConnectTarget="J-Link" buildConfiguration="Debug" sessionSettings="" debugSearchFileMap="" fileDialogInitialDirectory="" debugSearchPath="" autoConnectCapabilities="3199"/>
+</session>
