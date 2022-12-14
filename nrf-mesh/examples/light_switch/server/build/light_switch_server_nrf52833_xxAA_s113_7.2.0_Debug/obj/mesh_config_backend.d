@@ -9,7 +9,6 @@ build/light_switch_server_nrf52833_xxAA_s113_7.2.0_Debug/obj/mesh_config_backend
  ../../../mesh/core/include/mesh_config_backend_file.h \
  ../../../mesh/core/api/nrf_mesh_config_core.h \
  ../../../mesh/core/api/nrf_mesh_defines.h include/nrf_mesh_config_app.h \
- ../include/light_switch_example_common.h \
  ../../../mesh/core/include/mesh_config_flashman_glue.h \
  ../../../mesh/core/api/flash_manager.h \
  C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 6.40/include/stdint.h \

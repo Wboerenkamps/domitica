@@ -52,6 +52,17 @@
  * @{
  */
 
+ /**
+ * @defgroup MODEL_CONFIG Model layer configuration parameters
+ */
+
+ /** Define for acknowledging message transaction timeout.
+ * @note @tagMeshSp recommends this to be minimum 60s. However, using
+ * recommendation can result in client getting blocked for a significant amount of time (60s), if
+ * acknowledged transaction does not receive a response.
+ */
+#define MODEL_ACKNOWLEDGED_TRANSACTION_TIMEOUT  (SEC_TO_US(10))
+
 /** Device company identifier. */
 #define DEVICE_COMPANY_ID (ACCESS_COMPANY_ID_NORDIC)
 
@@ -68,6 +79,12 @@
  * @{
  */
 
+// /**
+// * The default TTL value for the node.
+// */
+//#define ACCESS_DEFAULT_TTL (MAX_AVAILABLE_SERVER_NODE_NUMBER > NRF_MESH_TTL_MAX ? \
+//        NRF_MESH_TTL_MAX : MAX_AVAILABLE_SERVER_NODE_NUMBER)
+
 /**
  * The default TTL value for the node.
  */
@@ -83,10 +100,10 @@
                             1 + /* Config Server                                */ \
                             1 + /* Health Server                                */ \
                             1 + /* Generic OnOff Server                         */ \
-			    2 +  /* Generic OnOff client (2 groups) */	           \
-                            1 + /* Default Transition Time Server               */ \
-                            1 + /* Scene Server                                 */ \
-                            1   /* Scene Setup Server (extends Scene Server)    */)
+                            0 + /* Default Transition Time Server               */ \
+                            0 + /* Scene Server                                 */ \
+                            0 + /* Scene Setup Server (extends Scene Server)    */ \
+                            2   /* Generic OnOff client (2 groups)              */)
 
 /**
  * The number of elements in the application.
@@ -94,7 +111,7 @@
  * @warning If the application is to support _multiple instances_ of the _same_ model, these instances
  * cannot be in the same element and a separate element is needed for each new instance of the same model.
  */
-#define ACCESS_ELEMENT_COUNT (1 + CLIENT_MODEL_INSTANCE_COUNT)
+#define ACCESS_ELEMENT_COUNT (1 + 2) /* One element per Generic OnOff client instance */ // 2 = CLIENT_MODEL_INSTANCE_COUNT
 
 /**
  * The number of (root only) default transition time instances used by the application.
@@ -104,13 +121,13 @@
 /**
  * The number of (root only) generic onoff instances used by the application.
  */
-#define GENERIC_ONOFF_SERVER_INSTANCES_MAX (2)
+#define GENERIC_ONOFF_SERVER_INSTANCES_MAX (1)
 
 /**
  * The number of scene setup server instances used by the application.
  */
 #ifndef SCENE_SETUP_SERVER_INSTANCES_MAX
-#define SCENE_SETUP_SERVER_INSTANCES_MAX (1)
+#define SCENE_SETUP_SERVER_INSTANCES_MAX (0)
 #endif
 
 /**
@@ -164,7 +181,7 @@
  * - Health publication
  * - Subscription address
  */
-#define DSM_NONVIRTUAL_ADDR_MAX                         (3)
+#define DSM_NONVIRTUAL_ADDR_MAX                         (ACCESS_MODEL_COUNT + 1)
 /** @} end of DSM_CONFIG */
 
 /** @} */
@@ -196,7 +213,7 @@
  *
  * @{
  */
-#define GAP_DEVICE_NAME                 "nRF5x Mesh Light"
+#define GAP_DEVICE_NAME                 "nRF5x Mesh Light and Switch"
 /** @} end of BLE_SOFTDEVICE_SUPPORT_CONFIG */
 
 /** @} end of NRF_MESH_CONFIG_CORE */

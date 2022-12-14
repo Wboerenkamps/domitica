@@ -37,7 +37,7 @@ build/light_switch_server_nrf52833_xxAA_s113_7.2.0_Debug/obj/config_server.o: \
  C:/nrf-mesh/nRF5_SDK_17.1.0_ddde560/components/softdevice/s113/headers/ble_gap.h \
  ../../../mesh/core/api/nrf_mesh_defines.h \
  ../../../mesh/core/api/nrf_mesh_config_core.h \
- include/nrf_mesh_config_app.h ../include/light_switch_example_common.h \
+ include/nrf_mesh_config_app.h \
  C:/nrf-mesh/nRF5_SDK_17.1.0_ddde560/components/softdevice/s113/headers/nrf_sdm.h \
  C:/nrf-mesh/nRF5_SDK_17.1.0_ddde560/components/softdevice/s113/headers/nrf_error_sdm.h \
  C:/nrf-mesh/nRF5_SDK_17.1.0_ddde560/components/softdevice/s113/headers/nrf_soc.h \
@@ -122,4 +122,23 @@ build/light_switch_server_nrf52833_xxAA_s113_7.2.0_Debug/obj/config_server.o: \
  ../../../mesh/prov/api/nrf_mesh_prov_types.h \
  ../../../mesh/prov/api/nrf_mesh_prov_bearer.h \
  ../../../mesh/core/include/log.h ../../../mesh/gatt/include/proxy.h \
- ../../../mesh/core/include/net_packet.h
+ ../../../mesh/core/include/net_packet.h \
+ ../../../mesh/friend/api/mesh_friend.h \
+ ../../../mesh/core/api/mesh_friendship_types.h \
+ ../../../mesh/friend/include/friend_sublist.h \
+ ../../../mesh/friend/include/friend_queue.h \
+ ../../../mesh/core/include/packet_mesh.h \
+ ../../../mesh/core/include/transport_internal.h \
+ ../../../mesh/friend/include/core_tx_friend.h \
+ ../../../mesh/bearer/include/broadcast.h \
+ ../../../mesh/bearer/include/radio_config.h \
+ ../../../mesh/bearer/include/bearer_handler.h \
+ ../../../mesh/core/include/timeslot_timer.h \
+ ../../../mesh/bearer/api/nrf_mesh_config_bearer.h \
+ ../../../mesh/bearer/api/bearer_defines.h \
+ C:/nrf-mesh/nRF5_SDK_17.1.0_ddde560/components/softdevice/s113/headers/nrf_soc.h \
+ ../../../mesh/core/include/timeslot.h \
+ ../../../mesh/core/include/timeslot_timer.h \
+ ../../../mesh/core/include/packet.h \
+ ../../../mesh/core/include/timer_scheduler.h \
+ ../../../mesh/friend/include/friend_internal.h

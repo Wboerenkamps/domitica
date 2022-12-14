@@ -27,7 +27,6 @@ build/light_switch_server_nrf52833_xxAA_s113_7.2.0_Debug/obj/aes_cmac.o: \
  C:/nrf-mesh/nRF5_SDK_17.1.0_ddde560/components/softdevice/s113/headers/nrf_error_soc.h \
  ../../../mesh/core/api/nrf_mesh_config_core.h \
  ../../../mesh/core/api/nrf_mesh_defines.h include/nrf_mesh_config_app.h \
- ../include/light_switch_example_common.h \
  ../../../mesh/core/include/utils.h \
  C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 6.40/include/stdbool.h \
  ../../../mesh/core/include/hal.h \

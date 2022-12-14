@@ -85,5 +85,4 @@ build/light_switch_server_nrf52840_xxAA_s140_7.2.0_Debug/obj/generic_onoff_mc.o:
  ../../../mesh/core/include/queue.h ../../../mesh/core/include/mesh_opt.h \
  ../../../mesh/core/api/mesh_config_entry.h \
  ../../../mesh/core/api/nrf_mesh_assert.h \
- ../../../models/model_spec/common/include/model_config_file.h \
- ../../../models/model_spec/scene/include/scene_common.h
+ ../../../models/model_spec/common/include/model_config_file.h

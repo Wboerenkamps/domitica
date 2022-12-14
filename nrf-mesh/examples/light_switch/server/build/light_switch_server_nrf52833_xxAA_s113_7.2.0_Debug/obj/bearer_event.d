@@ -11,7 +11,6 @@ build/light_switch_server_nrf52833_xxAA_s113_7.2.0_Debug/obj/bearer_event.o: \
  C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 6.40/include/stdbool.h \
  ../../../mesh/core/api/nrf_mesh_config_core.h \
  ../../../mesh/core/api/nrf_mesh_defines.h include/nrf_mesh_config_app.h \
- ../include/light_switch_example_common.h \
  ../../../mesh/core/include/queue.h \
  C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 6.40/include/stddef.h \
  ../../../mesh/core/include/utils.h \

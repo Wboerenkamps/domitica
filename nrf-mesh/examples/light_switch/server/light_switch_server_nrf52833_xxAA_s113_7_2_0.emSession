@@ -1,7 +1,9 @@
 <!DOCTYPE CrossStudio_Session_File>
 <session>
  <Bookmarks/>
- <Breakpoints groups="Breakpoints" active_group="Breakpoints"/>
+ <Breakpoints groups="Breakpoints" active_group="Breakpoints">
+  <BreakpointListItem trigger="" line="91" counter="0" hardwareBreakpoint="" isFunctionBreakpoint="false" action="" expression="" group="Breakpoints" type="Breakpoint" state="4" filename="include/nrf_mesh_config_app.h" useHWbreakpoint="false"/>
+ </Breakpoints>
  <ExecutionProfileWindow/>
  <FrameBufferWindow>
   <FrameBufferWindow bufferHeight="-1" addressSpace="" addressText="" bufferWidth="-1"/>
@@ -14,7 +16,9 @@
   <ProjectSessionItem path="light_switch_server_nrf52833_xxAA_s113_7.2.0"/>
   <ProjectSessionItem path="light_switch_server_nrf52833_xxAA_s113_7.2.0;light_switch_server_nrf52833_xxAA_s113_7.2.0"/>
   <ProjectSessionItem path="light_switch_server_nrf52833_xxAA_s113_7.2.0;light_switch_server_nrf52833_xxAA_s113_7.2.0;Application"/>
+  <ProjectSessionItem path="light_switch_server_nrf52833_xxAA_s113_7.2.0;light_switch_server_nrf52833_xxAA_s113_7.2.0;Configuration Model"/>
   <ProjectSessionItem path="light_switch_server_nrf52833_xxAA_s113_7.2.0;light_switch_server_nrf52833_xxAA_s113_7.2.0;Generic OnOff Model"/>
+  <ProjectSessionItem path="light_switch_server_nrf52833_xxAA_s113_7.2.0;light_switch_server_nrf52833_xxAA_s113_7.2.0;Other"/>
  </Project>
  <Register1/>
  <Register2/>
@@ -40,10 +44,13 @@
  </Watch4>
  <Files>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="0" useTextEdit="1" path="../../../doc/getting_started/SES.md" left="0" top="0" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="551" useTextEdit="1" path="src/main.c" left="0" top="506" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="1" y="368" useTextEdit="1" path="src/main.c" left="0" selected="1" top="329" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="0" useTextEdit="1" openedFrom="C:/nrf-mesh/examples/light_switch2/server/src/main.c" path="../../../models/model_spec/scene/include/scene_setup_server.h" left="0" top="20" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="36" y="259" useTextEdit="1" path="../../../mesh/core/include/log.h" left="0" top="224" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="0" useTextEdit="1" path="../../common/src/app_onoff.c" left="0" selected="1" top="88" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="0" useTextEdit="1" path="../../common/src/app_onoff.c" left="0" top="88" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="0" useTextEdit="1" path="../../../mesh/stack/src/mesh_stack.c" left="0" top="0" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="211" useTextEdit="1" path="include/nrf_mesh_config_app.h" left="0" top="107" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="185" useTextEdit="1" path="C:/nrf-mesh/nRF5_SDK_17.1.0_ddde560/components/libraries/util/app_util.h" left="0" top="175" codecName="Default"/>
  </Files>
- <EMStudioWindow activeProject="light_switch_server_nrf52833_xxAA_s113_7.2.0" fileDialogDefaultFilter="*.c" autoConnectTarget="J-Link" buildConfiguration="Debug" sessionSettings="" debugSearchFileMap="" fileDialogInitialDirectory="" debugSearchPath="" autoConnectCapabilities="3199"/>
+ <EMStudioWindow activeProject="light_switch_server_nrf52833_xxAA_s113_7.2.0" fileDialogDefaultFilter="*.c" autoConnectTarget="J-Link" buildConfiguration="Debug" sessionSettings="" debugSearchFileMap="" fileDialogInitialDirectory="" debugSearchPath="" autoConnectCapabilities="3711"/>
 </session>

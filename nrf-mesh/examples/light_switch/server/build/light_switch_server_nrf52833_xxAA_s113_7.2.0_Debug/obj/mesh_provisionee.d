@@ -33,7 +33,7 @@ build/light_switch_server_nrf52833_xxAA_s113_7.2.0_Debug/obj/mesh_provisionee.o:
  C:/nrf-mesh/nRF5_SDK_17.1.0_ddde560/modules/nrfx/mdk/compiler_abstraction.h \
  C:/nrf-mesh/nRF5_SDK_17.1.0_ddde560/components/softdevice/s113/headers/ble_gatts.h \
  ../../../mesh/prov/api/nrf_mesh_config_prov.h \
- include/nrf_mesh_config_app.h ../include/light_switch_example_common.h \
+ include/nrf_mesh_config_app.h \
  ../../../mesh/prov/api/nrf_mesh_prov_types.h \
  ../../../mesh/core/api/nrf_mesh_defines.h \
  ../../../mesh/prov/api/nrf_mesh_prov_events.h \

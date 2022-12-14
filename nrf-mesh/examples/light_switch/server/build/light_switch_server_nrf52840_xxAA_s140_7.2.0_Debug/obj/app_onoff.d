@@ -66,14 +66,7 @@ build/light_switch_server_nrf52840_xxAA_s140_7.2.0_Debug/obj/app_onoff.o: \
  C:/nrf-mesh/nRF5_SDK_17.1.0_ddde560/components/libraries/util/nordic_common.h \
  ../../../mesh/core/include/timer_scheduler.h \
  ../../../mesh/core/include/timer.h ../../common/include/app_transition.h \
- ../../../mesh/core/include/fsm.h ../../common/include/app_scene.h \
- ../../../models/model_spec/scene/include/scene_setup_server.h \
- ../../../models/model_spec/scene/include/scene_common.h \
- ../../../models/model_spec/scene/include/scene_messages.h \
- ../../../models/model_spec/generic_dtt/include/generic_dtt_server.h \
- ../../../models/model_spec/generic_dtt/include/generic_dtt_common.h \
- ../../common/include/nrf_mesh_config_examples.h \
- ../../common/include/mesh_app_utils.h \
+ ../../../mesh/core/include/fsm.h ../../common/include/mesh_app_utils.h \
  C:/nrf-mesh/nRF5_SDK_17.1.0_ddde560/components/softdevice/s140/headers/nrf_nvic.h \
  ../../common/include/example_common.h ../../../mesh/core/include/uri.h \
  ../../common/include/app_transition.h ../../../mesh/core/include/log.h \
@@ -99,5 +92,4 @@ build/light_switch_server_nrf52840_xxAA_s140_7.2.0_Debug/obj/app_onoff.o: \
  ../../../mesh/core/include/queue.h ../../../mesh/core/include/mesh_opt.h \
  ../../../mesh/core/api/mesh_config_entry.h \
  ../../../mesh/core/api/nrf_mesh_assert.h \
- ../../../models/model_spec/common/include/model_config_file.h \
- ../../../models/model_spec/scene/include/scene_common.h
+ ../../../models/model_spec/common/include/model_config_file.h

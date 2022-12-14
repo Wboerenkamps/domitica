@@ -122,6 +122,8 @@ static void app_onoff_scene_transition_cb(const app_scene_setup_server_t * p_app
 /*****************************************************************************
  * Static variables
  *****************************************************************************/
+ static generic_onoff_client_t m_clients[CLIENT_MODEL_INSTANCE_COUNT];
+ static bool ledstatus;
 static bool m_device_provisioned;
 const generic_onoff_client_callbacks_t client_cbs =
 {
@@ -129,7 +131,7 @@ const generic_onoff_client_callbacks_t client_cbs =
     .ack_transaction_status_cb = app_gen_onoff_client_transaction_status_cb,
     .periodic_publish_cb = app_gen_onoff_client_publish_interval_cb
 };
-static generic_onoff_client_t m_clients[CLIENT_MODEL_INSTANCE_COUNT];
+
 
 static nrf_mesh_evt_handler_t m_event_handler =
 {
@@ -158,11 +160,18 @@ APP_ONOFF_SERVER_DEF(m_onoff_server_0,
                      app_onoff_server_set_cb,
                      app_onoff_server_get_cb,
                      app_onoff_server_transition_cb)
-
+static void device_identification_start_cb(uint8_t attention_duration_s)
+{
+    hal_led_mask_set(HAL_LED_MASK, false);
+    hal_led_blink_ms(HAL_LED_MASK_HALF,
+                     LED_BLINK_ATTENTION_INTERVAL_MS,
+                     LED_BLINK_ATTENTION_COUNT(attention_duration_s));
+}
 static void app_generic_onoff_client_status_cb(const generic_onoff_client_t * p_self,
                                                const access_message_rx_meta_t * p_meta,
                                                const generic_onoff_status_params_t * p_in)
 {
+    ledstatus = !p_in->present_on_off;
     if (p_in->remaining_time_ms > 0)
     {
         __LOG(LOG_SRC_APP, LOG_LEVEL_INFO, "OnOff server: 0x%04x, Present OnOff: %d, Target OnOff: %d, Remaining Time: %d ms\n",
@@ -178,23 +187,24 @@ static void app_generic_onoff_client_status_cb(const generic_onoff_client_t * p_
 static void app_onoff_server_set_cb(const app_onoff_server_t * p_server, bool onoff)
 {
     /* Resolve the server instance here if required, this example uses only 1 instance. */
-
     __LOG(LOG_SRC_APP, LOG_LEVEL_INFO, "Setting GPIO value: %d\n", onoff)
-
+    
     hal_led_pin_set(ONOFF_SERVER_0_LED, onoff);
 }
 /* Callback for reading the hardware state */
 static void app_onoff_server_get_cb(const app_onoff_server_t * p_server, bool * p_present_onoff)
 {
     /* Resolve the server instance here if required, this example uses only 1 instance. */
-
+    
     *p_present_onoff = hal_led_pin_get(ONOFF_SERVER_0_LED);
+    
 }
 
 /* Callback for updating the hardware state */
 static void app_onoff_server_transition_cb(const app_onoff_server_t * p_server,
                                                 uint32_t transition_time_ms, bool target_onoff)
 {
+    //ledstatus = !ledstatus;
     __LOG(LOG_SRC_APP, LOG_LEVEL_INFO, "Transition time: %d, Target OnOff: %d\n",
                                        transition_time_ms, target_onoff);
 }
@@ -273,7 +283,7 @@ static void button_event_handler(uint32_t button_number)
     generic_onoff_set_params_t set_params;
     model_transition_t transition_params;
     static uint8_t tid = 0;
-
+  /*
     switch(button_number)
     {
         case 1:
@@ -287,7 +297,7 @@ static void button_event_handler(uint32_t button_number)
             set_params.on_off = APP_STATE_OFF;
             break;
     }
-
+  */
     set_params.tid = tid++;
     transition_params.delay_ms = APP_ONOFF_DELAY_MS;
     transition_params.transition_time_ms = APP_ONOFF_TRANSITION_TIME_MS;
@@ -296,23 +306,28 @@ static void button_event_handler(uint32_t button_number)
     switch (button_number)
     {
         case 1:
-        case 2:
-            /* Demonstrate acknowledged transaction, using 1st client model instance */
-            /* In this examples, users will not be blocked if the model is busy */
+        /* Demonstrate un-acknowledged transaction, using 2nd client model instance */
+           // hal_led_pin_set(BSP_LED_1, set_params.on_off);
+           set_params.on_off = ledstatus;
             (void)access_model_reliable_cancel(m_clients[0].model_handle);
             status = generic_onoff_client_set(&m_clients[0], &set_params, &transition_params);
-            hal_led_pin_set(BSP_LED_0, set_params.on_off);
-            break;
-
-        case 3:
-        case 4:
-            /* Demonstrate un-acknowledged transaction, using 2nd client model instance */
-            status = generic_onoff_client_set_unack(&m_clients[1], &set_params,
-                                                    &transition_params, APP_UNACK_MSG_REPEAT_COUNT);
-            hal_led_pin_set(BSP_LED_1, set_params.on_off);
             break;
         default:
             __LOG(LOG_SRC_APP, LOG_LEVEL_INFO, m_usage_string);
+            break;
+        case 2:
+            /* Demonstrate acknowledged transaction, using 1st client model instance */
+            /* In this examples, users will not be blocked if the model is busy */
+            //hal_led_pin_set(BSP_LED_0, set_params.on_off);
+        case 3:
+            set_params.on_off = ledstatus;
+            (void)access_model_reliable_cancel(m_clients[0].model_handle);
+            status = generic_onoff_client_set(&m_clients[0], &set_params, &transition_params);
+            break;
+        case 4:
+            set_params.on_off = APP_STATE_OFF;
+            (void)access_model_reliable_cancel(m_clients[0].model_handle);
+            status = generic_onoff_client_set(&m_clients[0], &set_params, &transition_params);
             break;
     }
 
@@ -344,7 +359,34 @@ static void button_event_handler(uint32_t button_number)
             break;
     }
 }
+static void app_gen_onoff_client_publish_interval_cb(access_model_handle_t handle, void * p_self)
+{
+     __LOG(LOG_SRC_APP, LOG_LEVEL_WARN, "Publish desired message here.\n");
+}
+static void app_gen_onoff_client_transaction_status_cb(access_model_handle_t model_handle,
+                                                       void * p_args,
+                                                       access_reliable_status_t status)
+{
+    switch(status)
+    {
+        case ACCESS_RELIABLE_TRANSFER_SUCCESS:
+            __LOG(LOG_SRC_APP, LOG_LEVEL_INFO, "Acknowledged transfer success.\n");
+            break;
 
+        case ACCESS_RELIABLE_TRANSFER_TIMEOUT:
+            hal_led_blink_ms(HAL_LED_MASK, LED_BLINK_SHORT_INTERVAL_MS, LED_BLINK_CNT_NO_REPLY);
+            __LOG(LOG_SRC_APP, LOG_LEVEL_INFO, "Acknowledged transfer timeout.\n");
+            break;
+
+        case ACCESS_RELIABLE_TRANSFER_CANCELLED:
+            __LOG(LOG_SRC_APP, LOG_LEVEL_INFO, "Acknowledged transfer cancelled.\n");
+            break;
+
+        default:
+            ERROR_CHECK(NRF_ERROR_INTERNAL);
+            break;
+    }
+}
 static void app_rtt_input_handler(int key)
 {
     if (key >= '1' && key <= '4')
@@ -358,13 +400,6 @@ static void app_rtt_input_handler(int key)
     }
 }
 
-static void device_identification_start_cb(uint8_t attention_duration_s)
-{
-    hal_led_mask_set(HAL_LED_MASK, false);
-    hal_led_blink_ms(HAL_LED_MASK_HALF,
-                     LED_BLINK_ATTENTION_INTERVAL_MS,
-                     LED_BLINK_ATTENTION_COUNT(attention_duration_s));
-}
 
 static void provisioning_aborted_cb(void)
 {
@@ -398,13 +433,23 @@ static void provisioning_complete_cb(void)
 static void models_init_cb(void)
 {
     __LOG(LOG_SRC_APP, LOG_LEVEL_INFO, "Initializing and adding models\n");
+
+    for (uint32_t i = 0; i < CLIENT_MODEL_INSTANCE_COUNT; ++i)
+    {
+        m_clients[i].settings.p_callbacks = &client_cbs;
+        m_clients[i].settings.timeout = 0;
+        m_clients[i].settings.force_segmented = APP_FORCE_SEGMENTATION;
+        m_clients[i].settings.transmic_size = APP_MIC_SIZE;
+
+        ERROR_CHECK(generic_onoff_client_init(&m_clients[i], i + 1));
+    }
+
     app_model_init();
 }
 
 static void mesh_init(void)
 {
-    /* Initialize the application storage for models */
-    model_config_file_init();
+   
 
     mesh_stack_init_params_t init_params =
     {
@@ -436,6 +481,8 @@ static void mesh_init(void)
         default:
             ERROR_CHECK(status);
     }
+     /* Initialize the application storage for models */
+    model_config_file_init();
 }
 
 static void initialize(void)
@@ -507,3 +554,8 @@ int main(void)
         (void)sd_app_evt_wait();
     }
 }
+
+
+
+
+

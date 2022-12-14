@@ -157,7 +157,7 @@ build/light_switch_server_nrf52840_xxAA_s140_7.2.0_Debug/obj/main.o: \
  ../../common/include/nrf_mesh_config_examples.h \
  ../include/light_switch_example_common.h \
  ../../common/include/app_onoff.h ../../common/include/app_transition.h \
- ../../../mesh/core/include/fsm.h ../../common/include/app_scene.h \
- ../../common/include/nrf_mesh_config_examples.h \
+ ../../../mesh/core/include/fsm.h \
  ../../common/include/ble_softdevice_support.h \
- ../../common/include/app_dtt.h ../../common/include/app_scene.h
+ ../../common/include/app_dtt.h ../../common/include/app_scene.h \
+ ../../common/include/nrf_mesh_config_examples.h

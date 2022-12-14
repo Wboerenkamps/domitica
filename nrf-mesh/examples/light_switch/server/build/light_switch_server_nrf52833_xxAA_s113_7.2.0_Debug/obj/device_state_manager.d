@@ -35,7 +35,7 @@ build/light_switch_server_nrf52833_xxAA_s113_7.2.0_Debug/obj/device_state_manage
  C:/nrf-mesh/nRF5_SDK_17.1.0_ddde560/components/softdevice/s113/headers/ble_gap.h \
  ../../../mesh/core/api/nrf_mesh_defines.h \
  ../../../mesh/core/api/nrf_mesh_config_core.h \
- include/nrf_mesh_config_app.h ../include/light_switch_example_common.h \
+ include/nrf_mesh_config_app.h \
  C:/nrf-mesh/nRF5_SDK_17.1.0_ddde560/components/softdevice/s113/headers/nrf_sdm.h \
  C:/nrf-mesh/nRF5_SDK_17.1.0_ddde560/components/softdevice/s113/headers/nrf_error_sdm.h \
  C:/nrf-mesh/nRF5_SDK_17.1.0_ddde560/components/softdevice/s113/headers/nrf_soc.h \
@@ -98,6 +98,7 @@ build/light_switch_server_nrf52833_xxAA_s113_7.2.0_Debug/obj/device_state_manage
  ../../../mesh/core/api/mesh_config_entry.h \
  ../../../mesh/bearer/include/radio_config.h \
  ../../../mesh/core/include/core_tx.h \
+ ../../../mesh/friend/api/mesh_opt_friend.h \
  ../../../mesh/access/include/mesh_opt_dsm.h \
  ../../../mesh/gatt/include/proxy.h \
  ../../../mesh/core/include/net_packet.h

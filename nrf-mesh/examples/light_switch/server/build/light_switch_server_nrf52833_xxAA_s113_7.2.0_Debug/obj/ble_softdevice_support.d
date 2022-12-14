@@ -7,8 +7,7 @@ build/light_switch_server_nrf52833_xxAA_s113_7.2.0_Debug/obj/ble_softdevice_supp
  C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 6.40/include/__SEGGER_RTL_Conf.h \
  C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 6.40/include/__SEGGER_RTL_Arm_Conf.h \
  ../../common/include/nrf_mesh_config_examples.h \
- include/nrf_mesh_config_app.h ../include/light_switch_example_common.h \
- ../../../mesh/gatt/api/nrf_mesh_gatt.h \
+ include/nrf_mesh_config_app.h ../../../mesh/gatt/api/nrf_mesh_gatt.h \
  ../../../mesh/core/api/nrf_mesh_config_core.h \
  ../../../mesh/core/api/nrf_mesh_defines.h \
  ../../../mesh/prov/api/nrf_mesh_config_prov.h include/sdk_config.h \

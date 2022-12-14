@@ -15,6 +15,7 @@
   <ProjectSessionItem path="light_switch_client_nrf52840_xxAA_s140_7.2.0;light_switch_client_nrf52840_xxAA_s140_7.2.0"/>
   <ProjectSessionItem path="light_switch_client_nrf52840_xxAA_s140_7.2.0;light_switch_client_nrf52840_xxAA_s140_7.2.0;Access"/>
   <ProjectSessionItem path="light_switch_client_nrf52840_xxAA_s140_7.2.0;light_switch_client_nrf52840_xxAA_s140_7.2.0;Application"/>
+  <ProjectSessionItem path="light_switch_client_nrf52840_xxAA_s140_7.2.0;light_switch_client_nrf52840_xxAA_s140_7.2.0;Generic OnOff Model"/>
  </Project>
  <Register1/>
  <Register2/>
@@ -40,8 +41,8 @@
  </Watch4>
  <Files>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="0" useTextEdit="1" path="../../../doc/getting_started/SES.md" left="0" top="0" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="186" useTextEdit="1" path="src/main.c" left="0" top="186" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="55" useTextEdit="1" path="src/main.c" left="0" selected="1" top="40" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="2" y="14" useTextEdit="1" path="../../common/src/app_error_weak.c" left="0" top="0" codecName="Default"/>
  </Files>
- <EMStudioWindow activeProject="light_switch_client_nrf52840_xxAA_s140_7.2.0" fileDialogDefaultFilter="*.c" autoConnectTarget="J-Link" buildConfiguration="Debug" sessionSettings="" debugSearchFileMap="" fileDialogInitialDirectory="" debugSearchPath="" autoConnectCapabilities="3199"/>
+ <EMStudioWindow activeProject="light_switch_client_nrf52840_xxAA_s140_7.2.0" fileDialogDefaultFilter="*.c" autoConnectTarget="J-Link" buildConfiguration="Debug" sessionSettings="" debugSearchFileMap="" fileDialogInitialDirectory="" debugSearchPath="" autoConnectCapabilities="3711"/>
 </session>

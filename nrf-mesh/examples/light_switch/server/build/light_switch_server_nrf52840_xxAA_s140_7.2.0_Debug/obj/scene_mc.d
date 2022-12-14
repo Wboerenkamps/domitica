@@ -84,5 +84,4 @@ build/light_switch_server_nrf52840_xxAA_s140_7.2.0_Debug/obj/scene_mc.o: \
  ../../../mesh/core/include/timer_scheduler.h \
  ../../../mesh/core/include/queue.h ../../../mesh/core/include/mesh_opt.h \
  ../../../mesh/core/api/mesh_config_entry.h \
- ../../../models/model_spec/common/include/model_config_file.h \
- ../../../mesh/core/api/nrf_mesh_assert.h
+ ../../../models/model_spec/common/include/model_config_file.h

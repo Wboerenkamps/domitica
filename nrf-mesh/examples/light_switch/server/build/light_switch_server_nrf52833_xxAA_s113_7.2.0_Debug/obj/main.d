@@ -65,7 +65,6 @@ build/light_switch_server_nrf52833_xxAA_s113_7.2.0_Debug/obj/main.o: \
  C:/nrf-mesh/nRF5_SDK_17.1.0_ddde560/components/libraries/util/app_error.h \
  ../../../mesh/core/api/nrf_mesh_config_core.h \
  ../../../mesh/core/api/nrf_mesh_defines.h include/nrf_mesh_config_app.h \
- ../include/light_switch_example_common.h \
  ../../../mesh/gatt/api/nrf_mesh_gatt.h \
  ../../../mesh/prov/api/nrf_mesh_config_prov.h \
  ../../../mesh/core/api/nrf_mesh_configure.h \
@@ -156,6 +155,7 @@ build/light_switch_server_nrf52833_xxAA_s113_7.2.0_Debug/obj/main.o: \
  include/app_config.h ../../common/include/example_common.h \
  ../../../mesh/core/include/uri.h \
  ../../common/include/nrf_mesh_config_examples.h \
+ ../include/light_switch_example_common.h \
  ../../common/include/app_onoff.h ../../common/include/app_transition.h \
  ../../../mesh/core/include/fsm.h \
  ../../common/include/ble_softdevice_support.h \

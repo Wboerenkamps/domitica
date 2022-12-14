@@ -7,7 +7,7 @@ build/light_switch_server_nrf52833_xxAA_s113_7.2.0_Debug/obj/rtt_input.o: \
  C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 6.40/include/__SEGGER_RTL_Conf.h \
  C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 6.40/include/__SEGGER_RTL_Arm_Conf.h \
  ../../common/include/nrf_mesh_config_examples.h \
- include/nrf_mesh_config_app.h ../include/light_switch_example_common.h \
+ include/nrf_mesh_config_app.h \
  C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 6.40/include/stdlib.h \
  ../../../external/rtt/include/SEGGER_RTT.h \
  ../../../external/rtt/include/SEGGER_RTT_Conf.h \
