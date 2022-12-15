@@ -14,12 +14,14 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
-    void fillListView();
+    void fillListViewGroup();
 
 private slots:
     void on_pushButton_2_clicked();
 
     void on_pushButton_3_clicked();
+
+    void on_CreateGroupBtn_clicked();
 
 private:
     Ui::MainWindow *ui;

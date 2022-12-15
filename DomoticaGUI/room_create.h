@@ -14,6 +14,10 @@ class Room_create : public QWidget
 public:
     explicit Room_create(QWidget *parent = nullptr);
     ~Room_create();
+    void openWidget();
+
+private slots:
+    void on_CreateGroup_clicked();
 
 private:
     Ui::Room_create *ui;

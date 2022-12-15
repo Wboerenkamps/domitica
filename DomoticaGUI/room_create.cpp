@@ -1,5 +1,12 @@
+#include <iostream>
+#include <fstream>
+#include <QtDebug>
+#include <QFile>
+#include <QTextStream>
+
 #include "room_create.h"
 #include "ui_room_create.h"
+#include "mainwindow.h"
 
 Room_create::Room_create(QWidget *parent) :
     QWidget(parent),
@@ -12,3 +19,23 @@ Room_create::~Room_create()
 {
     delete ui;
 }
+
+void Room_create::openWidget() {
+    Room_create *window = new Room_create();
+    window->show();
+}
+
+void Room_create::on_CreateGroup_clicked()
+{
+    MainWindow mainwindow;
+    QFile file("room.txt");
+    if (!file.open(QIODevice::WriteOnly | QIODevice::Append | QIODevice::Text))
+        return;
+
+    QTextStream out(&file);
+    out << ui->groupEdit->text() << Qt::endl;
+    file.close();
+    mainwindow.fillListViewGroup();
+    this->close();
+}
+

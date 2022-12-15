@@ -1,12 +1,21 @@
+#include <iostream>
+#include <fstream>
+#include <QtDebug>
+#include <QFile>
+#include <QTextStream>
+#include <QStringListModel>
+
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "rooms.h"
+#include "room_create.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    fillListViewGroup();
 }
 
 MainWindow::~MainWindow()
@@ -14,10 +23,20 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-void MainWindow::fillListView() {
-    QString array_List[5]={"Delphi","Mobile","Dot Net","Java","Open Source"};
+void MainWindow::fillListViewGroup() {
+    QStringList stringlist;
+    QStringListModel  *model;
+    model = new QStringListModel(this);
+    QFile file("room.txt");
+    if (!file.open(QIODevice::ReadOnly | QIODevice::Text))
+        return;
 
+    while (!file.atEnd()) {
+        stringlist.append(file.readLine().trimmed());
 
+    }
+    model->setStringList(stringlist);
+    ui->roomLV->setModel(model);
 }
 
 void MainWindow::on_pushButton_2_clicked()
@@ -31,5 +50,13 @@ void MainWindow::on_pushButton_3_clicked()
 {
     Rooms rooms;
     rooms.roomReadFile();
+}
+
+
+
+void MainWindow::on_CreateGroupBtn_clicked()
+{
+    Room_create room_create;
+    room_create.openWidget();
 }
 

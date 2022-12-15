@@ -5,6 +5,7 @@
 #include <QTextStream>
 
 #include "rooms.h"
+#include "room_create.h"
 
 Rooms::Rooms()
 {
@@ -25,12 +26,6 @@ void Rooms::roomWriteFile() {
 }
 
 void Rooms::roomReadFile() {
-    QFile file("room.txt");
-    if (!file.open(QIODevice::ReadOnly | QIODevice::Text))
-        return;
 
-    while (!file.atEnd()) {
-        QString line = file.readLine();
-        qDebug() << line;
-    }
 }
+
