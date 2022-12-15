@@ -1,5 +1,5 @@
 build/light_switch_server_nrf52840_xxAA_s140_7.2.0_Debug/obj/app_timer_mesh.o: \
- C:\nrf-mesh\external\app_timer\app_timer_mesh.c \
+ C:\project\ domotica\nrf-mesh\external\app_timer\app_timer_mesh.c \
  C:/nrf-mesh/nRF5_SDK_17.1.0_ddde560/components/libraries/util/sdk_common.h \
  C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 6.40/include/stdint.h \
  C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 6.40/include/__SEGGER_RTL.h \

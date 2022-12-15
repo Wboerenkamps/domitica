@@ -1,5 +1,5 @@
 build/light_switch_server_nrf52840_xxAA_s140_7.2.0_Debug/obj/long_timer.o: \
- C:\nrf-mesh\mesh\core\src\long_timer.c \
+ C:\project\ domotica\nrf-mesh\mesh\core\src\long_timer.c \
  ../../../mesh/core/include/long_timer.h \
  ../../../mesh/core/include/timer_scheduler.h \
  C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 6.40/include/stdint.h \

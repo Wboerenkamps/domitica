@@ -1,5 +1,5 @@
 build/light_switch_server_nrf52840_xxAA_s140_7.2.0_Debug/obj/SEGGER_RTT_printf.o: \
- C:\Nordic\nrf5sdkformeshv500src\external\rtt\src\SEGGER_RTT_printf.c \
+ C:\project\ domotica\nrf-mesh\external\rtt\src\SEGGER_RTT_printf.c \
  ../../../external/rtt/include/SEGGER_RTT.h \
  ../../../external/rtt/include/SEGGER_RTT_Conf.h \
  ../../../external/rtt/include/SEGGER_RTT_Conf.h \
