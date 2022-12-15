@@ -123,9 +123,9 @@
       </widget>
      </item>
      <item row="0" column="0">
-      <widget class="QLabel" name="label_3">
+      <widget class="QLabel" name="GroupName">
        <property name="text">
-        <string>Name of chosen sensor/actuator</string>
+        <string>Group name</string>
        </property>
       </widget>
      </item>

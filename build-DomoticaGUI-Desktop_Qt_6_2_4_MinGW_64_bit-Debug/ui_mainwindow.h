@@ -42,7 +42,7 @@ public:
     QWidget *gridLayoutWidget_2;
     QGridLayout *gridLayout_2;
     QRadioButton *radioButton;
-    QLabel *label_3;
+    QLabel *GroupName;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -107,10 +107,10 @@ public:
 
         gridLayout_2->addWidget(radioButton, 1, 0, 1, 1);
 
-        label_3 = new QLabel(gridLayoutWidget_2);
-        label_3->setObjectName(QString::fromUtf8("label_3"));
+        GroupName = new QLabel(gridLayoutWidget_2);
+        GroupName->setObjectName(QString::fromUtf8("GroupName"));
 
-        gridLayout_2->addWidget(label_3, 0, 0, 1, 1);
+        gridLayout_2->addWidget(GroupName, 0, 0, 1, 1);
 
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
@@ -137,7 +137,7 @@ public:
         CreateGroupBtn->setText(QCoreApplication::translate("MainWindow", "Create new group", nullptr));
         pushButton_5->setText(QCoreApplication::translate("MainWindow", "PushButton", nullptr));
         radioButton->setText(QCoreApplication::translate("MainWindow", "Status", nullptr));
-        label_3->setText(QCoreApplication::translate("MainWindow", "Name of chosen sensor/actuator", nullptr));
+        GroupName->setText(QCoreApplication::translate("MainWindow", "Group name", nullptr));
     } // retranslateUi
 
 };

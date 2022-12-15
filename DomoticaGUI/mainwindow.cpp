@@ -4,7 +4,7 @@
 #include <QFile>
 #include <QTextStream>
 #include <QStringListModel>
-
+#include <QListWidget>
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "rooms.h"
@@ -24,8 +24,9 @@ MainWindow::~MainWindow()
 }
 
 void MainWindow::fillListViewGroup() {
+
     QStringList stringlist;
-    QStringListModel  *model;
+
     model = new QStringListModel(this);
     QFile file("room.txt");
     if (!file.open(QIODevice::ReadOnly | QIODevice::Text))
@@ -37,6 +38,12 @@ void MainWindow::fillListViewGroup() {
     model->setStringList(stringlist);
     ui->roomLV->setModel(model);
     qDebug() << "done";
+    file.close();
+
+}
+
+void MainWindow::updateListViewGroup() {
+
 }
 
 void MainWindow::on_pushButton_2_clicked()
@@ -58,5 +65,11 @@ void MainWindow::on_CreateGroupBtn_clicked()
 {
     Room_create room_create;
     room_create.openWidget();
+}
+
+
+void MainWindow::on_roomLV_clicked(const QModelIndex &index)
+{
+    fillListViewGroup();
 }
 
