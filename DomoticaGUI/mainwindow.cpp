@@ -33,10 +33,10 @@ void MainWindow::fillListViewGroup() {
 
     while (!file.atEnd()) {
         stringlist.append(file.readLine().trimmed());
-
     }
     model->setStringList(stringlist);
     ui->roomLV->setModel(model);
+    qDebug() << "done";
 }
 
 void MainWindow::on_pushButton_2_clicked()
