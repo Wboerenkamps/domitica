@@ -1,5 +1,5 @@
 build/light_switch_server_nrf52833_xxAA_s113_7.2.0_Debug/obj/app_error_weak.o: \
- C:\project\ domotica\nrf-mesh\examples\common\src\app_error_weak.c \
+ C:\project\ domotica\nrf-mesh\examples\light_switch\server\app_error_weak.c \
  C:/nrf-mesh/nRF5_SDK_17.1.0_ddde560/modules/nrfx/mdk/nrf.h \
  C:/nrf-mesh/nRF5_SDK_17.1.0_ddde560/modules/nrfx/mdk/nrf52833.h \
  C:/nrf-mesh/nRF5_SDK_17.1.0_ddde560/components/toolchain/cmsis/include/core_cm4.h \

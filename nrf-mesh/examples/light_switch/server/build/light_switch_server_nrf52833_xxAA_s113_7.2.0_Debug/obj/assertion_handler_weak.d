@@ -1,5 +1,5 @@
 build/light_switch_server_nrf52833_xxAA_s113_7.2.0_Debug/obj/assertion_handler_weak.o: \
- C:\nrf-mesh\examples\common\src\assertion_handler_weak.c \
+ C:\project\ domotica\nrf-mesh\examples\light_switch\server\assertion_handler_weak.c \
  C:/nrf-mesh/nRF5_SDK_17.1.0_ddde560/components/libraries/util/app_error.h \
  C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 6.40/include/stdint.h \
  C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 6.40/include/__SEGGER_RTL.h \

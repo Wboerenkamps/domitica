@@ -152,8 +152,10 @@ build/light_switch_server_nrf52833_xxAA_s113_7.2.0_Debug/obj/main.o: \
  ../../../models/model_spec/generic_onoff/include/generic_onoff_messages.h \
  ../../../models/model_spec/common/include/model_config_file.h \
  ../../../mesh/core/include/log.h ../../common/include/rtt_input.h \
- include/app_config.h ../../common/include/example_common.h \
- ../../../mesh/core/include/uri.h \
+ include/app_config.h ../../../mesh/prov/api/mesh_opt_prov.h \
+ ../../../mesh/core/include/mesh_opt.h \
+ ../../../mesh/core/api/mesh_config_entry.h \
+ ../../common/include/example_common.h ../../../mesh/core/include/uri.h \
  ../../common/include/nrf_mesh_config_examples.h \
  ../include/light_switch_example_common.h \
  ../../common/include/app_onoff.h ../../common/include/app_transition.h \

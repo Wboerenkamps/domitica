@@ -1,5 +1,5 @@
 build/light_switch_server_nrf52833_xxAA_s113_7.2.0_Debug/obj/device_state_manager.o: \
- C:\project\ domotica\nrf-mesh\mesh\access\src\device_state_manager.c \
+ C:\project\ domotica\nrf-mesh\examples\light_switch\server\device_state_manager.c \
  ../../../mesh/access/api/device_state_manager.h \
  C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 6.40/include/stdbool.h \
  C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 6.40/include/stdint.h \

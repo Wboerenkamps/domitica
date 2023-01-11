@@ -1,5 +1,5 @@
 build/light_switch_server_nrf52833_xxAA_s113_7.2.0_Debug/obj/mesh_adv.o: \
- C:\project\ domotica\nrf-mesh\examples\common\src\mesh_adv.c \
+ C:\project\ domotica\nrf-mesh\examples\light_switch\server\mesh_adv.c \
  ../../../mesh/gatt/api/mesh_adv.h \
  C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 6.40/include/stdint.h \
  C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 6.40/include/__SEGGER_RTL.h \

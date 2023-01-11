@@ -1,5 +1,5 @@
 build/light_switch_server_nrf52833_xxAA_s113_7.2.0_Debug/obj/access_publish_retransmission.o: \
- C:\project\ domotica\nrf-mesh\mesh\access\src\access_publish_retransmission.c \
+ C:\project\ domotica\nrf-mesh\examples\light_switch\server\access_publish_retransmission.c \
  ../../../mesh/access/include/access_publish_retransmission.h \
  ../../../mesh/access/api/access.h \
  C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 6.40/include/stdint.h \

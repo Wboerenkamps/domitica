@@ -70,6 +70,8 @@
 
 /* Example specific includes */
 #include "app_config.h"
+#include "mesh_opt_prov.h"
+#include "nrf_mesh_serial.h"
 #include "example_common.h"
 #include "nrf_mesh_config_examples.h"
 #include "light_switch_example_common.h"
@@ -184,7 +186,7 @@ static void app_generic_onoff_client_status_cb(const generic_onoff_client_t * p_
     }
 }
 /* Callback for updating the hardware state */
-static void app_onoff_server_set_cb(const app_onoff_server_t * p_server, bool onoff)
+static void app_onoff_server_set_cb (const app_onoff_server_t * p_server, bool onoff)
 {
     /* Resolve the server instance here if required, this example uses only 1 instance. */
     __LOG(LOG_SRC_APP, LOG_LEVEL_INFO, "Setting GPIO value: %d\n", onoff)
@@ -482,6 +484,7 @@ static void mesh_init(void)
             ERROR_CHECK(status);
     }
      /* Initialize the application storage for models */
+
     model_config_file_init();
 }
 

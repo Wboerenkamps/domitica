@@ -57,15 +57,23 @@
  </Watch4>
  <Files>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="0" useTextEdit="1" path="../../../doc/getting_started/SES.md" left="0" top="0" codecName="Default"/>
+<<<<<<< Updated upstream
   <SessionOpenFile windowGroup="DockEditLeft" x="28" y="97" useTextEdit="1" path="src/main.c" left="0" selected="1" top="65" codecName="Default"/>
+=======
+  <SessionOpenFile windowGroup="DockEditLeft" x="21" y="74" useTextEdit="1" path="src/main.c" left="0" selected="1" top="65" codecName="Default"/>
+>>>>>>> Stashed changes
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="0" useTextEdit="1" openedFrom="C:/nrf-mesh/examples/light_switch2/server/src/main.c" path="../../../models/model_spec/scene/include/scene_setup_server.h" left="0" top="20" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="36" y="259" useTextEdit="1" path="../../../mesh/core/include/log.h" left="11" top="224" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="0" useTextEdit="1" path="../../common/src/app_onoff.c" left="0" top="88" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="0" useTextEdit="1" path="../../../mesh/stack/src/mesh_stack.c" left="0" top="0" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="211" useTextEdit="1" path="include/nrf_mesh_config_app.h" left="0" top="164" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="211" useTextEdit="1" path="include/nrf_mesh_config_app.h" left="0" top="169" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="185" useTextEdit="1" path="C:/nrf-mesh/nRF5_SDK_17.1.0_ddde560/components/libraries/util/app_util.h" left="0" top="175" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="150" useTextEdit="1" openedFrom="C:/project domotica/nrf-mesh/examples/light_switch/server/src/main.c" path="../../common/src/simple_hal.c" left="0" top="114" codecName="Default"/>
+<<<<<<< Updated upstream
   <SessionOpenFile windowGroup="DockEditLeft" x="30" y="239" useTextEdit="1" openedFrom="C:/project domotica/nrf-mesh/examples/light_switch/server/src/main.c" path="../../../models/model_spec/generic_onoff/src/generic_onoff_client.c" left="0" top="188" codecName="Default"/>
+=======
+  <SessionOpenFile windowGroup="DockEditLeft" x="30" y="239" useTextEdit="1" openedFrom="C:/project domotica/nrf-mesh/examples/light_switch/server/src/main.c" path="../../../models/model_spec/generic_onoff/src/generic_onoff_client.c" left="0" top="198" codecName="Default"/>
+>>>>>>> Stashed changes
  </Files>
  <EMStudioWindow activeProject="light_switch_server_nrf52833_xxAA_s113_7.2.0" fileDialogDefaultFilter="*.c" autoConnectTarget="J-Link" buildConfiguration="Debug" sessionSettings="" debugSearchFileMap="" fileDialogInitialDirectory="" debugSearchPath="" autoConnectCapabilities="3199"/>
 </session>

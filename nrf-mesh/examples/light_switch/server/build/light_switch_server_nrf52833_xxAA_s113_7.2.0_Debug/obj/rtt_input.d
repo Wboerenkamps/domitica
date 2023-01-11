@@ -1,5 +1,5 @@
 build/light_switch_server_nrf52833_xxAA_s113_7.2.0_Debug/obj/rtt_input.o: \
- C:\project\ domotica\nrf-mesh\examples\common\src\rtt_input.c \
+ C:\project\ domotica\nrf-mesh\examples\light_switch\server\rtt_input.c \
  ../../common/include/rtt_input.h \
  C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 6.40/include/stdint.h \
  C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 6.40/include/__SEGGER_RTL.h \
