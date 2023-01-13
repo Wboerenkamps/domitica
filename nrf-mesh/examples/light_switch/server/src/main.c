@@ -63,7 +63,10 @@
 #include "scene_setup_server.h"
 #include "generic_onoff_client.h"
 #include "model_config_file.h"
-
+//serial 
+#include "nrf_delay.h"
+#include "mesh_opt_prov.h"
+#include "nrf_mesh_serial.h"
 /* Logging and RTT */
 #include "log.h"
 #include "rtt_input.h"
@@ -481,6 +484,8 @@ static void mesh_init(void)
         default:
             ERROR_CHECK(status);
     }
+    __LOG(LOG_SRC_APP, LOG_LEVEL_INFO, "Initializing serial interface...\n");
+    ERROR_CHECK(nrf_mesh_serial_init(NULL));
      /* Initialize the application storage for models */
     model_config_file_init();
 }
@@ -529,7 +534,9 @@ static void start(void)
     else
     {
         unicast_address_print();
+        
     }
+    uint32_t status = nrf_mesh_serial_enable();
 
     mesh_app_uuid_print(nrf_mesh_configure_device_uuid_get());
 

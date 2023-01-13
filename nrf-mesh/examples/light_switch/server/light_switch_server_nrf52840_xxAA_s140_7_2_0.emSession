@@ -41,8 +41,9 @@
  </Watch4>
  <Files>
   <SessionOpenFile windowGroup="DockEditLeft" x="26" y="16" useTextEdit="1" path="../../../doc/getting_started/SES.md" left="0" top="0" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="561" useTextEdit="1" path="src/main.c" left="0" top="504" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="50" y="493" useTextEdit="1" path="src/main.c" left="0" selected="1" top="472" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="30" y="256" useTextEdit="1" path="../../../mesh/core/include/log.h" left="0" top="239" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="0" useTextEdit="1" path="../../common/src/assertion_handler_weak.c" left="0" top="0" codecName="Default"/>
  </Files>
  <EMStudioWindow activeProject="light_switch_server_nrf52840_xxAA_s140_7.2.0" fileDialogDefaultFilter="*.c" autoConnectTarget="J-Link" buildConfiguration="Debug" sessionSettings="" debugSearchFileMap="" fileDialogInitialDirectory="" debugSearchPath="" autoConnectCapabilities="3711"/>
 </session>

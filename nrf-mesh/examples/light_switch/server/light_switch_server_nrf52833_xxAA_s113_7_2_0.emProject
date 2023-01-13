@@ -220,6 +220,22 @@
       <file file_name="$(SDK_ROOT:../../../../nRF5_SDK_17.0.2_d674dde)/modules/nrfx/mdk/ses_startup_nrf_common.s" />
       <file file_name="$(SDK_ROOT:../../../../nRF5_SDK_17.0.2_d674dde)/modules/nrfx/mdk/system_nrf52833.c" />
     </folder>
+	<folder Name="Serial">
+    <file file_name="../../../mesh/serial/src/nrf_mesh_serial.c" />
+    <file file_name="../../../mesh/serial/src/serial.c" />
+    <file file_name="../../../mesh/serial/src/serial_bearer.c" />
+    <file file_name="../../../mesh/serial/src/serial_handler_access.c" />
+    <file file_name="../../../mesh/serial/src/serial_handler_app.c" />
+    <file file_name="../../../mesh/serial/src/serial_handler_common.c" />
+    <file file_name="../../../mesh/serial/src/serial_handler_config.c" />
+    <file file_name="../../../mesh/serial/src/serial_handler_device.c" />
+    <file file_name="../../../mesh/serial/src/serial_handler_dfu.c" />
+    <file file_name="../../../mesh/serial/src/serial_handler_mesh.c" />
+    <file file_name="../../../mesh/serial/src/serial_handler_models.c" />
+    <file file_name="../../../mesh/serial/src/serial_handler_openmesh.c" />
+    <file file_name="../../../mesh/serial/src/serial_handler_prov.c" />
+    <file file_name="../../../mesh/serial/src/serial_uart.c" />
+    </folder>
     <folder Name="uECC">
       <file file_name="../../../external/micro-ecc/uECC.c">
         <configuration
@@ -228,5 +244,6 @@
           gcc_omit_frame_pointer="Yes" />
       </file>
     </folder>
+	
   </project>
 </solution>
