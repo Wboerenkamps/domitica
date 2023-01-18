@@ -1,6 +1,8 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
+#include "serialcommand.h"
+
 #include <QMainWindow>
 #include <QStringListModel>
 
@@ -30,5 +32,6 @@ private slots:
 private:
     Ui::MainWindow *ui;
     QStringListModel  *model;
+    SerialCommand *serialcommand;
 };
 #endif // MAINWINDOW_H

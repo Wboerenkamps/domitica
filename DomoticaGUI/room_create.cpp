@@ -33,9 +33,14 @@ void Room_create::on_CreateGroup_clicked()
         return;
 
     QTextStream out(&file);
-    out << ui->groupEdit->text() << Qt::endl;
-    file.close();
-    mainwindow.fillListViewGroup();
-    this->close();
+    if(ui->hexEdit->text() == "") {
+        ui->warningLbl->setText("Please enter a valid hex code");
+    } else {
+        out << ui->groupEdit->text() << ", " << ui->hexEdit->text() << Qt::endl;
+        file.close();
+        mainwindow.fillListViewGroup();
+        this->close();
+    }
+
 }
 

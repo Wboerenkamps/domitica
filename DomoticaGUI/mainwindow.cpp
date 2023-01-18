@@ -5,6 +5,8 @@
 #include <QTextStream>
 #include <QStringListModel>
 #include <QListWidget>
+#include <vector>
+#include <QSet>
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "rooms.h"
@@ -16,6 +18,7 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
     fillListViewGroup();
+//    serialcommand = new SerialCommand;
 }
 
 MainWindow::~MainWindow()
@@ -24,8 +27,9 @@ MainWindow::~MainWindow()
 }
 
 void MainWindow::fillListViewGroup() {
-
-    QStringList stringlist;
+    QStringList hexCode;
+    QStringList hexCodeTemp;
+    QStringList groupName;
 
     model = new QStringListModel(this);
     QFile file("room.txt");
@@ -33,9 +37,11 @@ void MainWindow::fillListViewGroup() {
         return;
 
     while (!file.atEnd()) {
-        stringlist.append(file.readLine().trimmed());
+        QString line = file.readLine().trimmed();
+        hexCodeTemp.append(line.section(",", 0, 0));
+        groupName.append(line.section(',', 0, 0));
     }
-    model->setStringList(stringlist);
+    model->setStringList(groupName);
     ui->roomLV->setModel(model);
     qDebug() << "done";
     file.close();
