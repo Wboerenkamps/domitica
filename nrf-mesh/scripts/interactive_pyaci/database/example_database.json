@@ -40,6 +40,65 @@
     }
   ],
   "nodes": [
+    {
+      "UUID": "0206d528dd1a4bc98e8dc6cce3b990d0",
+      "appKeys": [
+        0
+      ],
+      "cid": "0059",
+      "configComplete": false,
+      "crpl": 40,
+      "deviceKey": "13e7f32e01dba58e4ee4455d01685af0",
+      "elements": [
+        {
+          "index": 0,
+          "location": "0000",
+          "models": [
+            {
+              "modelId": "0000"
+            },
+            {
+              "modelId": "0002"
+            },
+            {
+              "modelId": "1000"
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "location": "0000",
+          "models": [
+            {
+              "modelId": "1001"
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "location": "0000",
+          "models": [
+            {
+              "modelId": "1001"
+            }
+          ]
+        }
+      ],
+      "features": {
+        "friend": 0,
+        "lowPower": 2,
+        "proxy": 0,
+        "relay": 0
+      },
+      "name": "Light bulb",
+      "netKeys": [
+        0
+      ],
+      "pid": "0000",
+      "security": "low",
+      "unicastAddress": 16,
+      "vid": "0000"
+    }
   ],
   "provisioners": [
     {
@@ -59,5 +118,5 @@
       "name": "BT Mesh Provisioner"
     }
   ],
-  "timestamp": "2018-03-09 15:24:56.753238"
+  "timestamp": "2023-01-18 14:20:20.919910"
 }

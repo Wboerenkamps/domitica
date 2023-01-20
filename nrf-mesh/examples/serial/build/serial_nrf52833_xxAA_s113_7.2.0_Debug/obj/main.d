@@ -108,7 +108,8 @@ build/serial_nrf52833_xxAA_s113_7.2.0_Debug/obj/main.o: \
  ../../mesh/core/include/list.h \
  ../common/include/ble_softdevice_support.h \
  ../common/include/nrf_mesh_config_examples.h \
- ../../mesh/prov/api/mesh_opt_prov.h ../../mesh/core/include/mesh_opt.h \
+ ../common/include/mesh_provisionee.h ../../mesh/prov/api/mesh_opt_prov.h \
+ ../../mesh/core/include/mesh_opt.h \
  ../../mesh/core/api/mesh_config_entry.h \
  ../../mesh/core/api/nrf_mesh_assert.h \
  ../../mesh/core/api/nrf_mesh_section.h \

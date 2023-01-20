@@ -24,6 +24,13 @@
   <ProjectSessionItem path="light_switch_server_nrf52833_xxAA_s113_7.2.0"/>
   <ProjectSessionItem path="light_switch_server_nrf52833_xxAA_s113_7.2.0;light_switch_server_nrf52833_xxAA_s113_7.2.0"/>
   <ProjectSessionItem path="light_switch_server_nrf52833_xxAA_s113_7.2.0;light_switch_server_nrf52833_xxAA_s113_7.2.0;Application"/>
+  <ProjectSessionItem path="light_switch_server_nrf52833_xxAA_s113_7.2.0;light_switch_server_nrf52833_xxAA_s113_7.2.0;Core"/>
+  <ProjectSessionItem path="light_switch_server_nrf52833_xxAA_s113_7.2.0;light_switch_server_nrf52833_xxAA_s113_7.2.0;GATT"/>
+  <ProjectSessionItem path="light_switch_server_nrf52833_xxAA_s113_7.2.0;light_switch_server_nrf52833_xxAA_s113_7.2.0;Generic OnOff Model"/>
+  <ProjectSessionItem path="light_switch_server_nrf52833_xxAA_s113_7.2.0;light_switch_server_nrf52833_xxAA_s113_7.2.0;Health Model"/>
+  <ProjectSessionItem path="light_switch_server_nrf52833_xxAA_s113_7.2.0;light_switch_server_nrf52833_xxAA_s113_7.2.0;Provisioning"/>
+  <ProjectSessionItem path="light_switch_server_nrf52833_xxAA_s113_7.2.0;light_switch_server_nrf52833_xxAA_s113_7.2.0;Serial"/>
+  <ProjectSessionItem path="light_switch_server_nrf52833_xxAA_s113_7.2.0;light_switch_server_nrf52833_xxAA_s113_7.2.0;uECC"/>
  </Project>
  <Register1>
   <RegisterWindow visibleNodes="CPU - Current Context/r0;CPU - Current Context/r1;CPU - Current Context/r2;CPU - Current Context/r3;CPU - Current Context/r4;CPU - Current Context/r5;CPU - Current Context/r6;CPU - Current Context/r7;CPU - Current Context/r8;CPU - Current Context/r9;CPU - Current Context/r10;CPU - Current Context/r11;CPU - Current Context/r12;CPU - Current Context/sp(r13);CPU - Current Context/lr(r14);CPU - Current Context/pc(r15);CPU - Current Context/apsr;CPU/r0;CPU/r1;CPU/r2;CPU/r3;CPU/r4;CPU/r5;CPU/r6;CPU/r7;CPU/r8;CPU/r9;CPU/r10;CPU/r11;CPU/r12;CPU/sp(r13);CPU/lr(r14);CPU/pc(r15);CPU/xpsr;CPU/MSP;CPU/PSP;CPU/PRIMASK;CPU/BASEPRI;CPU/FAULTMASK;CPU/CONTROL;CPU/internal" binaryNodes="" asciiNodes="" openNodes="CPU - Current Context" name="light_switch_server_nrf52833_xxAA_s113_7.2.0_Debug" decimalNodes="" octalNodes="" unsignedNodes=""/>
@@ -57,17 +64,29 @@
  </Watch4>
  <Files>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="0" useTextEdit="1" path="../../../doc/getting_started/SES.md" left="0" top="0" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="78" useTextEdit="1" path="src/main.c" left="0" selected="1" top="45" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="0" useTextEdit="1" openedFrom="C:/nrf-mesh/examples/light_switch2/server/src/main.c" path="../../../models/model_spec/scene/include/scene_setup_server.h" left="0" top="20" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="20" y="548" useTextEdit="1" path="src/main.c" left="0" selected="1" top="518" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="0" useTextEdit="1" openedFrom="C:/nrf-mesh/examples/light_switch2/server/src/main.c" path="../../../models/model_spec/scene/include/scene_setup_server.h" left="0" top="60" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="36" y="259" useTextEdit="1" path="../../../mesh/core/include/log.h" left="11" top="224" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="0" useTextEdit="1" path="../../common/src/app_onoff.c" left="0" top="88" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="0" useTextEdit="1" path="../../../mesh/stack/src/mesh_stack.c" left="0" top="0" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="211" useTextEdit="1" path="include/nrf_mesh_config_app.h" left="0" top="171" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="211" useTextEdit="1" path="include/nrf_mesh_config_app.h" left="0" top="169" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="185" useTextEdit="1" path="C:/nrf-mesh/nRF5_SDK_17.1.0_ddde560/components/libraries/util/app_util.h" left="0" top="175" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="150" useTextEdit="1" openedFrom="C:/project domotica/nrf-mesh/examples/light_switch/server/src/main.c" path="../../common/src/simple_hal.c" left="0" top="114" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="30" y="239" useTextEdit="1" openedFrom="C:/project domotica/nrf-mesh/examples/light_switch/server/src/main.c" path="../../../models/model_spec/generic_onoff/src/generic_onoff_client.c" left="0" top="199" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="2" y="18" useTextEdit="1" path="../../../mesh/serial/src/serial_bearer.c" left="0" top="14" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="1" y="25" useTextEdit="1" path="../../../mesh/serial/src/serial.c" left="0" top="0" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="30" y="239" useTextEdit="1" openedFrom="C:/project domotica/nrf-mesh/examples/light_switch/server/src/main.c" path="../../../models/model_spec/generic_onoff/src/generic_onoff_client.c" left="0" top="198" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="63" y="76" useTextEdit="1" openedFrom="C:/project domotica/nrf-mesh/examples/light_switch/server/src/main.c" path="include/nrf_mesh_serial.h" left="0" top="71" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="14" y="89" useTextEdit="1" openedFrom="C:/project domotica/nrf-mesh/examples/light_switch/server/include/nrf_mesh_serial.h" path="../../../mesh/serial/src/nrf_mesh_serial.c" left="0" top="63" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="5" y="303" useTextEdit="1" openedFrom="C:/project domotica/nrf-mesh/examples/light_switch/server/src/main.c" path="../../../mesh/serial/src/serial_handler_device.c" left="0" top="284" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="0" useTextEdit="1" path="../../../mesh/serial/src/serial_handler_mesh.c" left="0" top="165" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="0" useTextEdit="1" path="../../../mesh/serial/src/serial.c" left="0" top="253" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="0" useTextEdit="1" path="../../../mesh/serial/src/serial_bearer.c" left="0" top="0" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="4" y="58" useTextEdit="1" path="../../common/include/mesh_app_utils.h" left="0" top="26" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="78" useTextEdit="1" openedFrom="C:/project domotica/nrf-mesh/mesh/serial/src/nrf_mesh_serial.c" path="include/serial.h" left="0" top="52" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="22" y="171" useTextEdit="1" openedFrom="C:/project domotica/nrf-mesh/examples/light_switch/server/src/main.c" path="../../common/include/mesh_provisionee.h" left="0" top="146" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="0" useTextEdit="1" path="../../common/src/mesh_provisionee.c" left="0" top="67" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="0" useTextEdit="1" path="../../../mesh/prov/src/prov_beacon.c" left="0" top="0" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="0" useTextEdit="1" path="../../../mesh/prov/src/nrf_mesh_prov_bearer_gatt.c" left="0" top="75" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="10" y="552" useTextEdit="1" openedFrom="C:/project domotica/nrf-mesh/examples/light_switch/server/src/main.c" path="../../../mesh/core/api/nrf_mesh_events.h" left="0" top="519" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="437" useTextEdit="1" openedFrom="C:/project domotica/nrf-mesh/mesh/core/api/nrf_mesh_events.h" path="../../../mesh/core/src/nrf_mesh.c" left="0" top="416" codecName="Default"/>
  </Files>
  <EMStudioWindow activeProject="light_switch_server_nrf52833_xxAA_s113_7.2.0" fileDialogDefaultFilter="*.c" autoConnectTarget="J-Link" buildConfiguration="Debug" sessionSettings="" debugSearchFileMap="" fileDialogInitialDirectory="" debugSearchPath="" autoConnectCapabilities="3711"/>
 </session>

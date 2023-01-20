@@ -14,6 +14,7 @@
   <ProjectSessionItem path="serial_nrf52833_xxAA_s113_7.2.0"/>
   <ProjectSessionItem path="serial_nrf52833_xxAA_s113_7.2.0;serial_nrf52833_xxAA_s113_7.2.0"/>
   <ProjectSessionItem path="serial_nrf52833_xxAA_s113_7.2.0;serial_nrf52833_xxAA_s113_7.2.0;Application"/>
+  <ProjectSessionItem path="serial_nrf52833_xxAA_s113_7.2.0;serial_nrf52833_xxAA_s113_7.2.0;Provisioning"/>
  </Project>
  <Register1/>
  <Register2/>
@@ -39,9 +40,17 @@
  </Watch4>
  <Files>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="0" useTextEdit="1" path="../../doc/getting_started/SES.md" left="0" top="0" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="6" y="88" useTextEdit="1" path="src/main.c" left="0" selected="1" top="58" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="29" y="156" useTextEdit="1" path="src/main.c" left="0" top="142" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="3" y="63" useTextEdit="1" openedFrom="C:/project domotica/nrf-mesh/examples/serial/src/main.c" path="../../mesh/serial/api/nrf_mesh_serial.h" left="0" top="33" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="9" y="59" useTextEdit="1" openedFrom="C:/project domotica/nrf-mesh/examples/serial/src/main.c" path="../../mesh/prov/api/mesh_opt_prov.h" left="0" top="2" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="9" y="59" useTextEdit="1" openedFrom="C:/project domotica/nrf-mesh/examples/serial/src/main.c" path="../../mesh/prov/api/mesh_opt_prov.h" left="0" top="17" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="0" useTextEdit="1" path="include/sdk_config.h" left="0" top="1511" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="0" useTextEdit="1" path="../common/src/simple_hal.c" left="0" top="0" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="14" y="30" useTextEdit="1" path="../../mesh/prov/src/nrf_mesh_prov_bearer_gatt.c" left="0" top="0" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="1" y="63" useTextEdit="1" path="../../mesh/gatt/include/mesh_gatt.h" left="0" top="59" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="0" useTextEdit="1" path="../../mesh/prov/src/provisioning.c" left="0" top="0" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="0" useTextEdit="1" path="../../mesh/prov/src/prov_utils.c" left="0" top="0" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="0" useTextEdit="1" path="../../mesh/prov/src/prov_provisionee.c" left="0" top="0" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="9" y="171" useTextEdit="1" openedFrom="C:/project domotica/nrf-mesh/examples/serial/src/main.c" path="../common/include/mesh_provisionee.h" left="0" top="144" codecName="Default"/>
  </Files>
- <EMStudioWindow activeProject="serial_nrf52833_xxAA_s113_7.2.0" fileDialogDefaultFilter="*.c" autoConnectTarget="J-Link" buildConfiguration="Debug" sessionSettings="" debugSearchFileMap="" fileDialogInitialDirectory="" debugSearchPath="" autoConnectCapabilities="3711"/>
+ <EMStudioWindow activeProject="serial_nrf52833_xxAA_s113_7.2.0" fileDialogDefaultFilter="*.c" autoConnectTarget="J-Link" buildConfiguration="Debug" sessionSettings="" debugSearchFileMap="" fileDialogInitialDirectory="" debugSearchPath="" autoConnectCapabilities="3199"/>
 </session>

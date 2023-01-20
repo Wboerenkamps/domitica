@@ -44,6 +44,7 @@
 #include "mesh_stack.h"
 #include "ble_softdevice_support.h"
 #include "nrf_mesh_config_examples.h"
+#include "mesh_provisionee.h"
 #include "mesh_opt_prov.h"
 #include "app_timer.h"
 #include "example_common.h"
@@ -91,6 +92,12 @@ static void mesh_init(void)
     __LOG(LOG_SRC_APP, LOG_LEVEL_INFO, "Initializing serial interface...\n");
     ERROR_CHECK(nrf_mesh_serial_init(NULL));
 }
+static void unicast_address_print(void)
+{
+    dsm_local_unicast_address_t node_address;
+    dsm_local_unicast_addresses_get(&node_address);
+    __LOG(LOG_SRC_APP, LOG_LEVEL_INFO, "Node Address: 0x%04x \n", node_address.address_start);
+}
 
 static void initialize(void)
 {
@@ -110,9 +117,57 @@ static void initialize(void)
 
     __LOG(LOG_SRC_APP, LOG_LEVEL_INFO, "Initialization complete!\n");
 }
+static void provisioning_complete_cb(void)
+{
+    __LOG(LOG_SRC_APP, LOG_LEVEL_INFO, "Successfully provisioned\n");
+
+#if MESH_FEATURE_GATT_ENABLED
+    /* Restores the application parameters after switching from the Provisioning
+     * service to the Proxy  */
+    gap_params_init();
+    conn_params_init();
+#endif
+
+    unicast_address_print();
+    hal_led_blink_stop();
+    hal_led_mask_set(HAL_LED_MASK, LED_MASK_STATE_OFF);
+    hal_led_blink_ms(HAL_LED_MASK, LED_BLINK_INTERVAL_MS, LED_BLINK_CNT_PROV);
+}
+static void device_identification_start_cb(uint8_t attention_duration_s)
+{
+    hal_led_mask_set(HAL_LED_MASK, false);
+    hal_led_blink_ms(HAL_LED_MASK_HALF,
+                     LED_BLINK_ATTENTION_INTERVAL_MS,
+                     LED_BLINK_ATTENTION_COUNT(attention_duration_s));
+}
+static void provisioning_aborted_cb(void)
+{
+    hal_led_blink_stop();
+}
 
 static void start(void)
 {
+    if (!m_device_provisioned)
+    {
+        static const uint8_t static_auth_data[NRF_MESH_KEY_SIZE] = STATIC_AUTH_DATA;
+        mesh_provisionee_start_params_t prov_start_params =
+        {
+            .p_static_data    = static_auth_data,
+            .prov_sd_ble_opt_set_cb = NULL,
+            .prov_complete_cb = provisioning_complete_cb,
+            .prov_device_identification_start_cb = device_identification_start_cb,
+            .prov_device_identification_stop_cb = NULL,
+            .prov_abort_cb = provisioning_aborted_cb,
+            .p_device_uri = EX_URI_LS_SERVER
+        };
+        ERROR_CHECK(mesh_provisionee_prov_start(&prov_start_params));
+    }
+    else
+    {
+        unicast_address_print();
+        
+    }
+    //nrf_mesh_evt_handler_add(&m_event_handler)
     ERROR_CHECK(nrf_mesh_serial_enable());
 
     mesh_app_uuid_print(nrf_mesh_configure_device_uuid_get());
@@ -120,6 +175,8 @@ static void start(void)
     ERROR_CHECK(mesh_stack_start());
 
     __LOG(LOG_SRC_APP, LOG_LEVEL_INFO, "Bluetooth Mesh Serial Interface Application started!\n");
+    hal_led_mask_set(HAL_LED_MASK_UPPER_HALF, LED_MASK_STATE_OFF);
+    hal_led_blink_ms(HAL_LED_MASK_UPPER_HALF, LED_BLINK_INTERVAL_MS, LED_BLINK_CNT_START);
 }
 
 int main(void)

@@ -484,14 +484,18 @@ static void mesh_init(void)
         default:
             ERROR_CHECK(status);
     }
-    __LOG(LOG_SRC_APP, LOG_LEVEL_INFO, "Initializing serial interface...\n");
+    __LOG(LOG_SRC_APP, LOG_LEVEL_INFO, "Initializing serial interface...\n");;
+
     ERROR_CHECK(nrf_mesh_serial_init(NULL));
+    //serial_handler_device_init(); 
      /* Initialize the application storage for models */
     model_config_file_init();
 }
-
 static void initialize(void)
 {
+    #if defined(NRF51) && defined(NRF_MESH_STACK_DEPTH)
+    stack_depth_paint_stack();
+#endif
     __LOG_INIT(LOG_SRC_APP | LOG_SRC_FRIEND, LOG_LEVEL_DBG1, LOG_CALLBACK_DEFAULT);
     __LOG(LOG_SRC_APP, LOG_LEVEL_INFO, "----- BLE Mesh Light Switch Server Demo -----\n");
 
@@ -536,13 +540,14 @@ static void start(void)
         unicast_address_print();
         
     }
-    uint32_t status = nrf_mesh_serial_enable();
+    
 
     mesh_app_uuid_print(nrf_mesh_configure_device_uuid_get());
 
     /* NRF_MESH_EVT_ENABLED is triggered in the mesh IRQ context after the stack is fully enabled.
      * This event is used to call Model APIs for establishing bindings and publish a model state information. */
     nrf_mesh_evt_handler_add(&m_event_handler);
+    nrf_mesh_serial_enable();
     ERROR_CHECK(mesh_stack_start());
 
     __LOG(LOG_SRC_APP, LOG_LEVEL_INFO, m_usage_string);
@@ -550,7 +555,6 @@ static void start(void)
     hal_led_mask_set(HAL_LED_MASK_UPPER_HALF, LED_MASK_STATE_OFF);
     hal_led_blink_ms(HAL_LED_MASK_UPPER_HALF, LED_BLINK_INTERVAL_MS, LED_BLINK_CNT_START);
 }
-
 int main(void)
 {
     initialize();
