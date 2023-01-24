@@ -183,8 +183,9 @@
       <file file_name="../../../models/foundation/health/src/health_server.c" />
     </folder>
     <folder Name="Generic OnOff Model">
-      <file file_name="../../../models/model_spec/generic_onoff/src/generic_onoff_server.c" />
+      <file file_name="C:/nrf-mesh/models/model_spec/generic_onoff/src/generic_onoff_client.c" />
       <file file_name="../../../models/model_spec/generic_onoff/src/generic_onoff_mc.c" />
+      <file file_name="../../../models/model_spec/generic_onoff/src/generic_onoff_server.c" />
     </folder>
     <folder Name="Other">
       <file file_name="../../../models/model_spec/common/src/model_config_file.c" />

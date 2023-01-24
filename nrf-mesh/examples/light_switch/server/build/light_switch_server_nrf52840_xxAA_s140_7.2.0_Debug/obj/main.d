@@ -151,6 +151,11 @@ build/light_switch_server_nrf52840_xxAA_s140_7.2.0_Debug/obj/main.o: \
  ../../../mesh/bearer/api/bearer_defines.h \
  ../../../models/model_spec/generic_onoff/include/generic_onoff_messages.h \
  ../../../models/model_spec/common/include/model_config_file.h \
+ C:/nrf-mesh/nRF5_SDK_17.1.0_ddde560/components/libraries/delay/nrf_delay.h \
+ ../../../mesh/prov/api/mesh_opt_prov.h \
+ ../../../mesh/core/include/mesh_opt.h \
+ ../../../mesh/core/api/mesh_config_entry.h include/nrf_mesh_serial.h \
+ C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 6.40/include/limits.h \
  ../../../mesh/core/include/log.h ../../common/include/rtt_input.h \
  include/app_config.h ../../common/include/example_common.h \
  ../../../mesh/core/include/uri.h \

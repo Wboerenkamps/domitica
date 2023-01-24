@@ -486,7 +486,6 @@ static void mesh_init(void)
     }
     __LOG(LOG_SRC_APP, LOG_LEVEL_INFO, "Initializing serial interface...\n");;
 
-    ERROR_CHECK(nrf_mesh_serial_init(NULL));
     //serial_handler_device_init(); 
      /* Initialize the application storage for models */
     model_config_file_init();
@@ -547,8 +546,6 @@ static void start(void)
     /* NRF_MESH_EVT_ENABLED is triggered in the mesh IRQ context after the stack is fully enabled.
      * This event is used to call Model APIs for establishing bindings and publish a model state information. */
     nrf_mesh_evt_handler_add(&m_event_handler);
-    nrf_mesh_serial_enable();
-    ERROR_CHECK(mesh_stack_start());
 
     __LOG(LOG_SRC_APP, LOG_LEVEL_INFO, m_usage_string);
 
